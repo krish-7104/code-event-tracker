@@ -1,0 +1,95 @@
+.webCards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cardWeb {
+  background-color: #6a8e7f;
+  min-width: 20%;
+  margin: 20px 20px;
+  padding: 28px 20px;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cardWebTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  color: #eff1f3;
+}
+.cardIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eff1f3;
+  font-size: 28px;
+}
+.contestCards {
+  margin-top: 30px;
+}
+.contestCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: 5px;
+  padding: 30px;
+  margin: 20px;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.label {
+  font-weight: 600;
+}
+.contestTitle {
+  grid-area: 1 / 1 / 2 / 3;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+.contestStartTime {
+  grid-area: 2 / 1 / 3 / 2;
+  font-size: 18px;
+}
+.contestEndTime {
+  grid-area: 2 / 2 / 3 / 3;
+  font-size: 18px;
+}
+.contestDuration {
+  grid-area: 3 / 1 / 4 / 2;
+  font-size: 18px;
+}
+.contestStatus {
+  grid-area: 3 / 2 / 4 / 3;
+  font-size: 18px;
+}
+.contestViewArea {
+  grid-area: 4 / 2 / 5 / 3;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.contestViewBtn {
+  margin-right: 10px;
+  border: none;
+  padding: 6px 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #eff1f3;
+  background-color: #143642;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+}

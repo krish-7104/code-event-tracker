@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import CardContest from "./CardContest";
+import CardWeb from "./CardWeb";
+import Navbar from "./Navbar";
+import "./style/App.css";
+const App = () => {
+  const [webData, setWebData] = useState([]);
+  const [data, setData] = useState([]);
 
-function App() {
+  const fetchWebsite = async (link) => {
+    await fetch(link)
+      .then((response) => response.json())
+      .then((data) => setWebData(data));
+  };
+  const fetchParticularData = async (link) => {
+    await fetch(link)
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  };
+  useEffect(() => {
+    fetchWebsite("https://www.kontests.net/api/v1/sites");
+  }, []);
+
+  const cardClickHandler = (event) => {
+    fetchParticularData(`https://www.kontests.net/api/v1/${event.target.id}`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="mainContainer">
+        <div className="webCards">
+          {webData.map((value) => {
+            return (
+              <CardWeb
+                key={value[1]}
+                id={value[1]}
+                link={value[2]}
+                title={value[0]}
+                click={cardClickHandler}
+              />
+            );
+          })}
+        </div>
+        <div className="contestCards">
+          {data.map((value) => {
+            return <CardContest key={Math.random() * 200} data={value} />;
+          })}
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
