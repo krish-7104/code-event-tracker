@@ -133,12 +133,9 @@
   .cardWeb {
     margin: 5px;
   }
-  .webCards {
-    justify-content: flex-start;
-  }
   .cardWebTitle {
     padding: 6px;
-    font-size: 9px;
+    font-size: 11px;
     text-transform: capitalize;
   }
   .selectedTitle {
