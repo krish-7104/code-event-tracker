@@ -4,7 +4,9 @@ import { FaLinkedin, FaGithubSquare, FaLink, FaTwitter } from "react-icons/fa";
 const Navbar = () => {
   return (
     <div className="mainNavbar">
-      <p className="navTitle">&#60;Code Contest Tracker/&#62;</p>
+      <a className="navTitle" href="/">
+        &#60;Code Contest Tracker/&#62;
+      </a>
       <div className="navSocialLogos">
         <a
           href="https://krishjotaniya.netlify.app"

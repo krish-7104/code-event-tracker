@@ -9,7 +9,7 @@
 .navTitle {
   font-weight: 600;
   letter-spacing: 1.4px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #143642;
 }
 .navSocialLogos {
@@ -20,8 +20,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0px 10px;
   cursor: pointer;
   color: #143642;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainNavbar {
+    padding: 12px;
+    justify-content: center;
+  }
+  .navTitle {
+    font-size: 15px;
+    text-align: center;
+  }
+  .navSocialLogos {
+    display: none;
+  }
 }

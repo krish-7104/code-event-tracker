@@ -9,6 +9,15 @@ body {
   background-color: #e3e3e3;
 }
 .mainContainer {
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
+}
+a {
+  text-decoration: none !important;
+}
+@media only screen and (max-width: 800px) {
+  .mainContainer {
+    max-width: 96%;
+    margin: auto;
+  }
 }
