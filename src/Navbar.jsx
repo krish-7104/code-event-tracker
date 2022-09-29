@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="mainNavbar">
       <a className="navTitle" href="/">
-        &#60;Code Contest Tracker/&#62;
+        &#60;Code Event Tracker/&#62;
       </a>
       <div className="navSocialLogos">
         <a
